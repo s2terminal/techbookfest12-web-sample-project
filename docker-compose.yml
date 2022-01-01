@@ -13,3 +13,11 @@ services:
       - .:/app
     ports:
       - 127.0.0.1:8080:8080
+  frontend:
+    image: node:16-alpine
+    working_dir: /app
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/app
+    command: yarn dev
