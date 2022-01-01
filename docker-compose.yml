@@ -21,3 +21,5 @@ services:
     volumes:
       - ./frontend:/app
     command: yarn dev
+    environment:
+      - BACKEND_URL=http://backend:8880
