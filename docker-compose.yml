@@ -7,3 +7,10 @@ services:
       - ./backend:/app
     ports:
       - 127.0.0.1:8880:8880
+  code:
+    image: codercom/code-server:latest
+    volumes:
+      - .:/app
+    ports:
+      - 127.0.0.1:8080:8080
+    command: "--auth none /app"
